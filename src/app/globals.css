@@ -1,35 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #0e091e;
-  /* Cosmic deep indigo-black */
-  --bg-muted: #0C081F;
-  /* Tech dark violet panel */
-  --bg-elevated: #130D35;
-  /* Slightly lighter bento gray/violet */
-  --bg-card: rgba(13, 8, 38, 0.7);
-  /* Translucent dark glass card */
-  --border: rgba(139, 92, 246, 0.2);
-  /* Glowing purple border */
-  --border-soft: rgba(139, 92, 246, 0.1);
-  --primary: #8B5CF6;
-  /* Neon Purple */
-  --primary-dark: #7C3AED;
-  --primary-soft: rgba(139, 92, 246, 0.15);
-  --accent-gold: #D4AF37;
-  /* Metallic Liquid Gold */
-  --accent-gold-soft: rgba(212, 175, 55, 0.12);
-  --text: #F8FAFC;
-  /* Slate 50 (bright slate) for high legibility */
-  --text-muted: #94A3B8;
-  /* Slate 400 */
-  --text-light: #64748B;
-  /* Slate 500 */
-  --radius: 14px;
-  --radius-lg: 20px;
-  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.7);
+  --bg: #030014;
+  /* Deep space black-violet (Obsidian) */
+  --bg-muted: #08051E;
+  /* Deep violet-black panel */
+  --bg-elevated: #0F0B30;
+  /* Bento gray/violet card highlight */
+  --bg-card: rgba(8, 4, 28, 0.7);
+  /* Translucent dark glass bento card */
+  --border: rgba(139, 92, 246, 0.16);
+  /* Ultra-sleek glowing purple border */
+  --border-soft: rgba(139, 92, 246, 0.08);
+  --border-gold: rgba(226, 201, 116, 0.15);
+  /* Subtle luxury gold border */
+  --primary: #A78BFA;
+  /* Vibrant bright violet-400 for high readability on dark */
+  --primary-dark: #8B5CF6;
+  /* Deep purple-500 */
+  --primary-soft: rgba(139, 92, 246, 0.12);
+  --accent-gold: #E2C974;
+  /* Sleek champagne liquid gold (luxury metallic) */
+  --accent-gold-soft: rgba(226, 201, 116, 0.1);
+  --text: #FFFFFF;
+  /* Pure white for extreme contrast */
+  --text-muted: #A1A1AA;
+  /* Zinc-400 for high-fidelity technical text */
+  --text-light: #71717A;
+  /* Zinc-500 */
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 10px 40px rgba(0, 0, 0, 0.65);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.85);
 }
 
 *,
@@ -295,15 +298,15 @@ body {
   border-radius: 50%;
   filter: blur(130px);
   pointer-events: none;
-  mix-blend-mode: multiply;
+  mix-blend-mode: plus-lighter;
 }
 
 .glow-indigo {
-  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.14) 0%, transparent 70%);
 }
 
 .glow-gold {
-  background: radial-gradient(circle, rgba(180, 138, 29, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(226, 201, 116, 0.09) 0%, transparent 70%);
 }
 
 /* Noise overlay */
