@@ -50,11 +50,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-4 inset-x-4 z-50 max-w-[820px] mx-auto rounded-full transition-all duration-300 ${
-          scrolled
+        className={`fixed top-4 inset-x-4 z-50 max-w-[820px] mx-auto rounded-full transition-all duration-300 ${scrolled
             ? "bg-[rgba(10,6,27,0.78)] backdrop-blur-xl border border-[rgba(139,92,246,0.22)] shadow-[0_12px_40px_rgba(0,0,0,0.55),_0_0_20px_rgba(139,92,246,0.06)] py-1"
             : "bg-[rgba(10,6,27,0.48)] backdrop-blur-md border border-[rgba(139,92,246,0.12)] py-2"
-        }`}
+          }`}
       >
         <div className="flex items-center w-full min-h-[40px] px-4 sm:px-5">
           <a
@@ -66,11 +65,10 @@ export default function Navbar() {
             <img
               src="/logo-cropped.png"
               alt="Leon Gutierrez Web Studio Logo"
-              className={`w-auto shrink-0 transition-all duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_15px_rgba(139,92,246,0.22)] hover:drop-shadow-[0_2px_25px_rgba(139,92,246,0.45)] select-none pointer-events-none ${
-                scrolled
+              className={`w-auto shrink-0 transition-all duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_15px_rgba(139,92,246,0.22)] hover:drop-shadow-[0_2px_25px_rgba(139,92,246,0.45)] select-none pointer-events-none ${scrolled
                   ? "h-[38px] sm:h-[42px] md:h-[45px] lg:h-[48px]"
                   : "h-[45px] sm:h-[48px] md:h-[52px] lg:h-[56px]"
-              }`}
+                }`}
             />
           </a>
 
@@ -111,19 +109,17 @@ export default function Navbar() {
 
       {open && (
         <div
-          className={`fixed inset-x-4 z-40 bg-[var(--bg-card)] backdrop-blur-xl border border-[var(--border)] p-5 rounded-2xl md:hidden shadow-2xl flex flex-col gap-1.5 transition-all duration-300 ${
-            scrolled ? "top-[74px] sm:top-[80px]" : "top-[90px] sm:top-[98px]"
-          }`}
+          className={`fixed inset-x-4 z-40 bg-[var(--bg-card)] backdrop-blur-xl border border-[var(--border)] p-5 rounded-2xl md:hidden shadow-2xl flex flex-col gap-1.5 transition-all duration-300 ${scrolled ? "top-[74px] sm:top-[80px]" : "top-[90px] sm:top-[98px]"
+            }`}
         >
           {links.map((l) => (
             <button
               key={l.label}
               onClick={() => go(l.href, l.section)}
-              className={`block w-full text-left px-4 py-3 text-[14px] font-semibold rounded-xl transition-all ${
-                active === l.section
+              className={`block w-full text-left px-4 py-3 text-[14px] font-semibold rounded-xl transition-all ${active === l.section
                   ? "bg-[var(--primary-soft)] text-[var(--primary)] border border-[var(--primary)]/15"
                   : "text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-slate-200/20"
-              }`}
+                }`}
             >
               {l.label}
             </button>
