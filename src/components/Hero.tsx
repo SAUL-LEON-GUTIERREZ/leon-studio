@@ -147,59 +147,35 @@ export default function Hero() {
             </button>
           </motion.div>
 
-          {/* ── Trust Stats Row (Opción C) ── */}
+          {/* ── Protagonist Mockup Wrapper with spring entrance ── */}
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-10 md:gap-14 mt-8 max-w-2xl mx-auto pt-6 border-t border-purple-500/10 mb-8"
+            transition={{ duration: 0.95, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
+            className="max-w-5xl mx-auto mt-8 sm:mt-12"
           >
-            {[
-              { value: "WEB", label: "Páginas Web" },
-              { value: "ECOM", label: "Tiendas Online" },
-              { value: "POS", label: "Sistemas de Venta" },
-              { value: "ERP", label: "Automatización" }
-            ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <p className="text-2xl md:text-3xl font-black font-display bg-gradient-to-r from-purple-400 via-fuchsia-500 to-pink-500 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(236,72,153,0.3)]">
-                  {stat.value}
-                </p>
-                <span className="text-[11px] text-slate-400 font-extrabold uppercase tracking-widest mt-1.5 block">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+            <HeroMockup />
           </motion.div>
+
         </div>
 
-        {/* ── Protagonist Mockup Wrapper with spring entrance ── */}
+        {/* Scroll cue from your code */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.95, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-5xl mx-auto mt-8 sm:mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2, duration: 0.8 }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block"
         >
-          <HeroMockup />
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="cursor-pointer"
+            onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
+          >
+            <ChevronDown className="w-6 h-6 text-purple-500/40 hover:text-purple-400 transition-colors" />
+          </motion.div>
         </motion.div>
-
       </div>
-
-      {/* Scroll cue from your code */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:block"
-      >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="cursor-pointer"
-          onClick={() => document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" })}
-        >
-          <ChevronDown className="w-6 h-6 text-purple-500/40 hover:text-purple-400 transition-colors" />
-        </motion.div>
-      </motion.div>
 
     </section>
   );
