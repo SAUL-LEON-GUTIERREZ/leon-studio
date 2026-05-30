@@ -63,7 +63,7 @@ export default function Navbar() {
           >
             {/* ── Official Logo ── */}
             <img
-              src="/logo-cropped.png"
+              src="/logo-monogram-transparent.png"
               alt="Leon Gutierrez Web Studio Logo"
               className={`w-auto shrink-0 transition-all duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_15px_rgba(139,92,246,0.22)] hover:drop-shadow-[0_2px_25px_rgba(139,92,246,0.45)] select-none pointer-events-none ${scrolled
                   ? "h-[38px] sm:h-[42px] md:h-[45px] lg:h-[48px]"

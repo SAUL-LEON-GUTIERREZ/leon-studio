@@ -24,7 +24,7 @@ export default function Footer() {
             {/* ── Official Logo ── */}
             <div className="mb-5 group">
               <img
-                src="/logo-transparent.png"
+                src="/logo-monogram-transparent.png"
                 alt="Leon Gutierrez Web Studio Logo"
                 className="h-14 sm:h-16 w-auto shrink-0 transition-all duration-300 group-hover:scale-[1.03] filter drop-shadow-[0_2px_15px_rgba(139,92,246,0.18)] select-none pointer-events-none"
               />
